@@ -1,0 +1,23 @@
+{
+  "name": "star-wars-api-testing-interview-mocha",
+  "version": "1.0.0",
+  "description": "[Task pdf file](./docs/Testing%20question%20for%20SDET%20Interview%20candidates.pdf)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "clean": "rimraf reports/",
+    "test": "npm run clean && npx mocha tests/*.js --timeout=30000 --reporter mochawesome --reporter-options reportDir=reports,reportFilename=SWAPIreport"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "axios-mock-adapter": "^1.22.0",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "rimraf": "^5.0.5"
+  }
+}
